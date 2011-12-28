@@ -3,9 +3,18 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
-\usepackage[colorlinks, pdfpagelabels, pdfstartview=FitH, bookmarksopen=true, 
-bookmarksnumbered=true, linkcolor=black, plainpages=false, 
-hypertexnames=false, citecolor=black, urlcolor=black] {hyperref}
+\usepackage[
+	colorlinks,
+	pdfpagelabels,
+	pdfstartview=FitH,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	linkcolor=black,
+	plainpages=false,
+	hypertexnames=false,
+	citecolor=black,
+	urlcolor=black
+]{hyperref}
 \usepackage{color}
 \definecolor{grau}{gray}{0.9}
 
@@ -18,15 +27,22 @@ hypertexnames=false, citecolor=black, urlcolor=black] {hyperref}
 \maketitle
 \newpage
 \tableofcontents
-\newpage
 
+\newpage
 \section{Vorwort}
-Dieses Dokument soll in erster Linie als Handout zu unserem Kurs für 
-Neumitglieder werden. Wer möchte, kann mir gerne helfen, es auszubauen und zu 
-verbessern. Da es sehr kurzfristig entstanden ist, enthält es entsprechend 
-viele Tipp und Satzfehler. Auch die Sprache ist vielleicht nicht immer sehr 
-gelungen. Ich bitte das zu berücksichtigen. Verbesserte Versionen werden 
-folgen. Ein besonderer Dank geht an Marco Geupert, von dem ich die ein oder 
+Diese Anleitung entstand als Begleitskript zu einem Einführungskurs für 
+Neupiraten im Bezirksverband 
+Schwaben\footnote{\url{http://www.piraten-schwaben.de}}. 
+Ich würde mich freuen, wenn aus diesem Skript eine allgemeine und leicht 
+verständliche Anleitung für jedes Neumitglied wird. Durch die freie Lizenz 
+darfst du diesen Text abändern, anpassen und vervielfältigen. Wenn du über 
+\LaTeX-Kenntnisse verfügst und gerne daran mitarbeiten möchtest, schau auf 
+
+\begin{center}
+	\url{https://github.com/michiwend/Tools-in-der-Piratenpartei}
+\end{center}
+
+Ein besonderer Dank geht an Marco Geupert, von dem ich die ein oder 
 andere Formulierung kopiert habe.\\
 \\
 Der Text steht unter einer 
@@ -76,8 +92,8 @@ Mailinglisten unübersichtlich
 Bei den Piraten lassen sich die Listen in zwei Arten unterscheiden: 
 \textit{Diskussionslisten}: Hier ist jeder Abonnent aufgefordert an den 
 Diskussionen teilzunehmen und \textit{Announcelisten}: Auf diesen Listen haben 
-nur wenige Schreibrechte; sie dienen dazu, Informationen insesondere 
-Pressemitteilungen und Termine zu verteilen.
+nur wenige Schreibrechte; sie dienen dazu, Informationen - insesondere 
+Pressemitteilungen - und Termine zu verteilen.
 
 Des weiteren kann man Mailinglisten in \textit{regional} und 
 \textit{thematisch} unterscheiden. Regionale Listen (z.B. Augsburg, 
@@ -103,7 +119,7 @@ Deutschland\footnote{\url{https://service.piratenpartei.de/listinfo}}.
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/uebersicht_mailinglisten_bayern}
 \caption{Übersicht aller Listen der Piraten Bayern}
-\label{mlbayernlist}
+\label{uebersicht_mailinglisten_bayern}
 \end{figure}
 
 \newpage
@@ -112,7 +128,8 @@ Zum Anmelden auf einer Liste - also zum Abonnieren - müssen wir auf der
 Anmeldeseite der jeweiligen Liste (Abb. \ref{mlabo}) nur unsere eMail-Adresse 
 und unsern Namen (nicht zwingend) eintragen. Das Passortfeld kann leer 
 gelassen werden, dann vergibt die Software eins.  Auf die Anmeldeseite gelangt 
-man übrigends über die Links in der Übersicht (Abb. \ref{mlbayernlist}). Nach 
+man übrigends über die Links in der Übersicht (Abb. 
+\ref{uebersicht_mailinglisten_bayern}). Nach 
 dem Klicken von "`Abonnieren"' wird an die eingetragene Adresse sofort eine 
 Bestätigungsmail geschickt, mit der das Abonnement verifiziert werden muss. 
 Dazu einfach auf die Nachricht Antworten, ohne am Betreff etwas zu ändern. 
@@ -120,8 +137,7 @@ Dazu einfach auf die Nachricht Antworten, ohne am Betreff etwas zu ändern.
 Liste angemeldet!} Alle Instruktionen stehen auch nochmal in dieser 
 Bestätigunsmail.
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{images/mailingliste_augsburg_anmeldung_kompl
-ett}
+\includegraphics[width=\textwidth]{images/mailingliste_augsburg_anmeldung_komplett}
 \caption{Anmeldeseite der Mailingliste Augsburg}
 \label{mlabo}
 \end{figure}
@@ -130,8 +146,11 @@ ett}
 Ist das getan, kann sofort mit dem Diskutieren losgelegt werden. Es wird dann 
 immer an die eMail-Adresse der Liste geschrieben (zu finden auf der 
 jeweilingen Anmeldeseite, vgl. Abb. \ref{mlabo}). Am Beispiel Augsburg ist das 
-\textit{\href{mailto:augsburg@lists.piratenpartei-bayern.de}{augsburg@lists.pir
-atenpartei-bayern.de}}. Jede Nachricht an diese Adresse wird sofort an alle 
+\textit{
+	\href{mailto:augsburg@lists.piratenpartei-bayern.de}
+	{augsburg@lists.piratenpartei-bayern.de}
+}. 
+Jede Nachricht an diese Adresse wird sofort an alle 
 Abonnenten verteilt, somit auch an einen selber. Daran lässt sich auch 
 überprüfen, ob alles geklappt hat. Der Betreff der eMail wird von der Software 
 automatisch um den Namen der Liste ergänzt. Dieser wird dem Betrefftext in 
@@ -147,13 +166,13 @@ unbedingt ein paar Kleinigkeiten beachtet werden.
 zusammenfasst
 \item Antworte \textbf{nicht} auf irgendeine Mail, um ein neues Thema zu 
 beginnen; auch nicht, wenn du den Betreff änderst! eMail-Programme, die 
-Nachrichten nach Themen sortieren (vgl. Abb. \ref{mlthunderbird}) verwenden 
-\textit{nicht} den Betreff dazu, sondern Headerdaten\footnote{Der so genannte 
-Kopf der eMail entählt die wichtigsten Informationen wie z.B. Empfänger, 
-Absender, Nachrichten-ID, etc. Diese Daten sind i.d.R. nicht sichtbar} der 
-eMail. Das führt sonst dazu, dass euer neues Thema fälschlicherweise als x-te 
-Antwort auf ein Anderes eingereiht wird. Andere Piraten werden es euch danken 
-:)
+Nachrichten nach Themen sortieren (vgl. Abb. 
+\ref{mailingliste_augsburg_thunderbird}) verwenden \textit{nicht} den Betreff 
+dazu, sondern Headerdaten\footnote{Der so genannte Kopf der eMail entählt die 
+wichtigsten Informationen wie z.B. Empfänger, Absender, Nachrichten-ID, etc. 
+Diese Daten sind i.d.R. nicht sichtbar} der eMail. Das führt sonst dazu, dass 
+euer neues Thema fälschlicherweise als x-te Antwort auf ein Anderes eingereiht 
+wird. Andere Piraten werden es euch danken :)
 \item Bitte lasst beim Antworten den ursprünglichen Betreff (genauer RE: Alter 
 Betreff) und Text der eMail bestehen und antwortet entweder unterhalb oder 
 oberhalb der ursprünglichen Nachricht. Richtet euch am Besten nach dem 
@@ -164,7 +183,7 @@ dürft :)
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/mailingliste_augsburg_thunderbird}
 \caption{Eine Diskussion auf der Augsburg-Liste (Thunderbird mit Baumstruktur)}
-\label{mlthunderbird}
+\label{mailingliste_augsburg_thunderbird}
 \end{figure}
 \end{itemize}
 
@@ -180,8 +199,9 @@ liegen}) Mailinglisten der Piratenpartei synkronisiert wird. Das heißt, alle
 Nachrichten auf den Mailinglisten werden in diesem Forum als Forenbeiträge 
 dargestellt. Wer also von jeher das Arbeiten mit Foren gewöhnt ist, kann hier 
 gleichermaßen an den Diskussionen teilnehmen. Ein Vorteil des Syncom ist 
-außerdem - da man ja nichtalle Mailinglisten abonnieren kann -, dass ich auch 
-auf Listen schreiben kann, die mich eventuell nur vorübergehen interessieren.\\
+außerdem - da man ja nicht alle Mailinglisten abonnieren kann -, dass auch 
+Listen (inkl. älterer Beiträge) betrachtet werden können, die einen eventuell 
+nur vorübergehen interessieren.\\
 \begin{center}
 \colorbox{grau}{Die Adresse des Forums ist 
 \url{https://news.piratenpartei.de/}}
@@ -190,12 +210,13 @@ auf Listen schreiben kann, die mich eventuell nur vorübergehen interessieren.\\
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/syncom_uebersicht}
 \caption{Syncom-Startseite}
-\label{synoverview}
+\label{syncom_uebersicht}
 \end{figure}
 \subsection{Registrieren}
 Auch am Sync-Forum - wie es manchmal genannt wird - muss man sich natürlich 
 registrieren, das gilt auch dann, wenn man eine Mailingliste vorher schon 
-abonniert hat. In Abb. \ref{synoverview} ist links in der obersten Leiste 
+abonniert hat. In Abb. \ref{syncom_uebersicht} ist links in der obersten 
+Leiste 
 "`Registrieren"' zu lesen. Den Link gefunden, leitet er euch zu der 
 selbsterklärenden Registrierung. Bitte achtet nach dem Prozedere auch auf eine 
 Bestätigungsemail, ohne die auch in diesem Fall eure Registrierung unwirksam 
@@ -206,49 +227,53 @@ Die einzelnen Mailinglisten der Piraten werden als Foren und Unterforen im
 Syncom abgebildet. In den Meisten Fällen ist das auch logisch untergliedert. 
 So findet sich z.B. die Augsburger Mailingliste als Unterforum von Schwaben 
 und Schwaben wiederum als Unterforum von Bayern in Landesverbände (siehe Abb. 
-\ref{synlvs})
+\ref{syncom_lvs})
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/syncom_lvs}
 \caption{Foren und Unterforen unter \textit{Landesverbände}}
-\label{synlvs}
+\label{syncom_lvs}
 \end{figure}
 
-Noch deutlicher jetzt in Abb. \ref{synschwab}: Das Forum \textit{Schwaben} ist 
+Noch deutlicher jetzt in Abb. \ref{syncom_schwaben}: Das Forum 
+\textit{Schwaben} ist 
 unten mit allen Diskussionen zu sehen, darüber weiterführende Links zu den 
 Unterforen \textit{Augsburg} und \textit{Allgäu}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/syncom_schwaben}
 \caption{Das Forum Schwaben (entspircht der Mailingliste Schwaben)}
-\label{synschwab}
+\label{syncom_schwaben}
 \end{figure}
 
 \subsection{Schreiben und Antworten}
 Hierfür gibt es die großen orangenen Schalflächen. In der Übersicht eines 
-Unterforums (Abb. \ref{synschwab}) findet sich die Schaltfläche "`Neues 
+Unterforums (Abb. \ref{syncom_schwaben}) findet sich die Schaltfläche "`Neues 
 Thema"' rechts oben. Damit wird die Nachrichtenmaske angezeigt und der Betreff 
 (entspricht dem Thema) ist leer; ihr legt den Betreff fest. Befindet ihr euch 
 bereits in einer Diskussion, heißt der gleiche Button an gleicher Position 
 "`Antworten"' und ruft die Nachrichtenmaske mit dem vorangegangenen Betreff 
 auf (diesen dann auch möglichst nicht verändern). Ihr könnt auch mitten im 
 Diskussionsverlauf auf bestimmt Beiträge antworten. Dazu findet ihr neben 
-jeder Nachricht die Schaltfläche "`Zitieren"'(Abb. \ref{synpost}), welche 
+jeder Nachricht die Schaltfläche "`Zitieren"'(Abb. \ref{syncom_antwort}), 
+welche 
 wieder die Nachrichtenmaske mit ausgefülltem Betreff aufruft.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/syncom_antwort}
 \caption{So kann´s aussehen - eine Antwort in \textit{Augsburg}}
-\label{synpost}
+\label{syncom_antwort}
 \end{figure}
 
-In Abb. \ref{synpost} sieht man sehr schön, wie eine Antwort auf eine Frage 
+In Abb. \ref{syncom_antwort} sieht man sehr schön, wie eine Antwort auf eine 
+Frage 
 aussieht. Die ursprüngliche Nachricht befindet sich im weißen Kasten und die 
 Antwort darunter. Das Beistpiel ist wieder innerhalb der Mailingliste 
 \textit{Augsburg}. Und noch als Tip: Die Darstellung der Beiträge kann von der 
 Baumstruktur in eine Liste geändert werden, indem ihr zwischen 
 \textit{Baumstrukturmodus} und \textit{Linearer Modus} umschaltet. Zu finden 
-sind die Links rechts oben in der Themenleiste (vgl. Abb. \ref{synpost}) 
+sind die Links rechts oben in der Themenleiste (vgl. Abb. 
+\ref{syncom_antwort}) 
 \\
 Auf mehr Details möchte ich in diesem Rahmen auch nicht eingehen, da das Forum 
 ansonsten selbsterklärend ist.
@@ -272,6 +297,7 @@ da jedes Mitglied und sogar Nichtmitglied im Wiki Schreibrechte (bis auf
 bestimmte Seiten) hat und somit die Entstehung einzelner Wikiseiten 
 mitgestalten kann.
 
+
 \begin{center}
 \colorbox{grau}{Das Piratenwiki ist unter \url{http://wiki.piratenpartei.de} 
 zu finden.}
@@ -280,7 +306,7 @@ zu finden.}
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/wiki_startseite}
 \caption{Das Piratenwiki - Hauptseite}
-\label{wikimain}
+\label{wiki_startseite}
 \end{figure}
 
 \subsection{Was gehört ins Wiki?}
@@ -296,7 +322,7 @@ Aktion XY. Auch werden Ergebnisse verschiedener AGs\footnote{eine
 
 \subsection{Registrieren}
 Im Piratenwiki darf jeder mitmachen bzw. mitschreiben! Voraussetzung ist eine 
-Registrierung. In Abb. \ref{wikimain} im roten Rahmen ist der Link 
+Registrierung. In Abb. \ref{wiki_startseite} im roten Rahmen ist der Link 
 \textit{Anmelden / Benutzerkonto erstellen} zu sehen. Hier auch die gleichen 
 Dinge beachte, wie in den anderen Registrierungen. Beim Wiki muss außerdem 
 kein Mensch seinen richtigen Namen angeben. Ein 
@@ -321,7 +347,8 @@ Nein, es ist nicht immer einfach. Wer im Wiki sucht, der bekommt oft graue
 Haare, wenn der Ersteller der Seite sie nur gut genug im Wiki versteckt hat. 
 Es gibt mehrere Möglichkeiten, um ans Ziel zu kommen. Die einfachste ist 
 bestimmt die Suchmaschine eurer Wahl. Das Wiki hat aber auch eine eingebaute 
-Suche (Eingabefeld unterhalb des roten Kasten in Abb. \ref{wikimain}), die 
+Suche (Eingabefeld unterhalb des roten Kasten in Abb. \ref{wiki_startseite}), 
+die 
 sich mit wahnsinnig vielen Parametern präzisieren lässt. Wenn eine Seite nicht 
 auf Anhieb gefunden wird, hilft oftmals die Suche nach einem Übergeordneten 
 Begriff. Wer also die Wikiseite von \textit{Augsburg} nicht findet aber beim 
@@ -345,7 +372,7 @@ betrieben.
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/pad_startseite}
 \caption{Die Startseite}
-\label{padstart}
+\label{pad_startseite}
 \end{figure}
 
 Mitlerweile wurden schon viele tausend Pads - wie die einzelnen Dokumente 
@@ -362,7 +389,7 @@ Es gibt zwei Wege, das Piratenpad zu nutzen:
 \paragraph{Vereinzelt}
 Hier werden meist so genannte \textit{öffentliche Pads} benutzt. Solch ein Pad 
 kann jeder anlegen, ohne registriert zu sein. Am einfachsten geht das über die 
-Schaltfläche "`neues Pad"' auf der Startseite (Abb. \ref{padstart}). Zu 
+Schaltfläche "`neues Pad"' auf der Startseite (Abb. \ref{pad_startseite}). Zu 
 erkennen sind öffentliche Pads vor allem an der Webadresse. Ist der 
 Hauptadresse \textit{piratenpad.de} nichts durch einen Punkt getrennt 
 vorangestellt, so ist es ein offenes Pad. Auf diese Pads kann jeder zugreifen 
@@ -373,7 +400,7 @@ und auch keiner ausgeschlossen werden.
 \begin{figure}[h]
 \centering\includegraphics[width=0.5\textwidth]{images/pad_login}
 \caption{Anmelden an einem Teampad}
-\label{padlogin}
+\label{pad_login}
 \end{figure}
 
 In diesem Fall empfiehlt es sich, ein \textit{Team} anzulegen. Auf der 
@@ -394,14 +421,14 @@ Anleitung von Stefan Müller weiterempfehlen.
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/pad_uebersicht}
 \caption{Ein öffentliches Pad}
-\label{padoverview}
+\label{pad_uebersicht}
 \end{figure}
 
 \subsection{Bedienung}
 Das Piratenpad kann mit jedem modernem Browser (Firefox, Chrome, Safari, ...) 
 geöffnet werden. Probleme kann es allerdings bei Smartphones geben. Manche 
 zeigen noch den Text an aber ein Mitarbeiten ist fast immer ausgeschlossen. In 
-Abb. \ref{padoverview} habe ich 4 wichtige Bereiche hervorgehoben. Dazu:
+Abb. \ref{pad_uebersicht} habe ich 4 wichtige Bereiche hervorgehoben. Dazu:
 \begin{itemize}
 \item[1]Das ist der Bereich, in dem der Text verfasst wird. Jedes Wort wird in 
 der Farbe des Benuzters hinterlegt; so lässt sich sehr einfach nachvollziehen, 
@@ -473,7 +500,8 @@ verhalten, hier aber habe ich keine Erfahrung. Spätestens beim ersten Start
 des Programms wird ein Audioassistent geöffnet. Dieser ist ausführlich erklärt 
 und sollte korrekt durchgeführt werden, damit eure Sprache gut aufgenommen 
 wird! Unter dem Punkt \textit{Sprachaktivitätserkennung} des Assistenten 
-sollte die Auswahl wie in Abb. \ref{mumble_ass} gewählt werden. Damit wird 
+sollte die Auswahl wie in Abb. \ref{mumble_ass_push} gewählt werden. Damit 
+wird 
 eine Taste zum Aktivieren eurer Stimmt benutzt (auch PushToTalk genannt), die 
 ihr selbst festlegen müsst (durch Klicken in das weiße Eingabefeld und 
 anschließendem Drücken der gewünschten Taste). Ich verwende hierfür meine 
@@ -483,27 +511,28 @@ rechte Shift-Taste, ihr könnte jede beliebige andere verwenden.
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/mumble_ass_push}
 \caption{Wichtig: Push to Talk auswählen und Taste festlegen}
-\label{mumble_ass}
+\label{mumble_ass_push}
 \end{figure}
 
 \subsection{Einrichtung}
 Nach dem Audioassistenten sind wir fast startklar, fast. Wir benötigen jetzt 
 noch den Server, auf dem die Konferenzen zu finden sind. Dazu gibt es im 
 Dateimenü (Servermenü unter Linux) den Punkt \textit{Verbinden}, der die 
-Serverliste (Abb. \ref{mumble_serverlist}) öffnet.
+Serverliste (Abb. \ref{mumble_server_liste}) öffnet.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/mumble_server_liste}
 \caption{Server auswählen / hinzufügen}
-\label{mumble_serverlist}
+\label{mumble_server_liste}
 \end{figure}
 
 Die Schaltfläche \textit{Server hinzufügen...} bringt uns nun zur Eingabemaske 
-für unseren Mumble-Server (Abb. \ref{mumble_serveradd}) Dabei sind die 
+für unseren Mumble-Server (Abb. \ref{mumble_server_hinzu}) Dabei sind die 
 einzelnen Felder wie folg auszufüllen:
 \begin{itemize}
 \item \textbf{Bezeichnung} Eine frei gewählt Bezeichnung für euren neuen 
-Server. Diese wird in der Liste (Abb. \ref{mumble_serverlist} mit diesem Namen 
+Server. Diese wird in der Liste (Abb. \ref{mumble_server_liste} mit diesem 
+Namen 
 angezeigt)
 \item \textbf{Adresse} Das ist die Serveradresse des NRW-Servers 
 \textit{mumble.piratenpartei-nrw.de}
@@ -513,19 +542,19 @@ noch nicht vergeben. Wählt hier einfach einen Nickname, ihr müsst auch hier
 nicht euren richtigen Namen verwenden.
 \end{itemize}
 Nachdem das vollbracht ist, befindet sich der Server nun dauerhaft in der 
-Liste eurer Favoriten (Abb. \ref{mumble_serverlist}). Ein Doppelklick darauf 
+Liste eurer Favoriten (Abb. \ref{mumble_server_liste}). Ein Doppelklick darauf 
 verbindet euch dann mit dem Server und ihr seht dann das eigentliche 
-Mumble-Fenster (Abb. \ref{mumble_main})
+Mumble-Fenster (Abb. \ref{mumble_raum_schwaben})
 
 \begin{figure}[h]
 \centering\includegraphics[width=0.5\textwidth]{images/mumble_server_hinzu}
 \caption{Hier werden die Serverdaten eingetragen}
-\label{mumble_serveradd}
+\label{mumble_server_hinzu}
 \end{figure}
 
 \subsection{Bedienung}
 Die Hauptelemente des Mumblefensters kurz erklärt (siehe rote Nummern in Abb. 
-\ref{mumble_main})
+\ref{mumble_raum_schwaben})
 \begin{itemize}
 \item[1] Das ist die Raumliste. Hier werden alle Sprachräume in einer 
 Baumstruktur dargestellt. Durch einen Doppelklick auf einen Raum oder einen 
@@ -559,7 +588,7 @@ an Parteitage) in die sich Redner einreihen.
 \begin{figure}[h]
 \centering\includegraphics[width=\textwidth]{images/mumble_raum_schwaben}
 \caption{Das Hauptfenster von Mumble - Raum Schwaben}
-\label{mumble_main}
+\label{mumble_raum_schwaben}
 \end{figure}
 
 
