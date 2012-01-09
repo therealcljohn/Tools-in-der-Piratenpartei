@@ -1,4 +1,4 @@
-\documentclass{scrartcl}
+\documentclass[titlepage]{scrartcl}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
@@ -18,34 +18,43 @@
 \usepackage{color}
 \definecolor{grau}{gray}{0.9}
 
-%\usepackage{bera}
-%\usepackage{berasans}
-%\usepackage{beraserif}
-%\usepackage{beramono}
+%Kopfzeile mit Piratenlogo
+%\usepackage{scrpage2}
+%\pagestyle{scrheadings} 
+%\ohead{\includegraphics[height=20pt]{images/logo_bzv_schwaben}}
 
-\title{Tools in der Piratenpartei}
+\title{
+	Tools in der Piratenpartei
+	\vspace{1cm}\\ % "\\" sind ein Workaround, die Grafik selber wird sonst nicht verschoben
+	\includegraphics[width=0.5\textwidth]{images/logo_bzv_schwaben}
+}
 \author{Michael Wendland}
 
 \begin{document}
-
 \maketitle
+
 \newpage
 \tableofcontents
 
 \newpage
 \section{Vorwort}
-Diese Anleitung entstand als Begleitskript zu einem Einführungskurs für Neupiraten im Bezirksverband Schwaben. 
-\footnote{\url{http://www.piraten-schwaben.de}} Ich würde mich freuen, wenn aus diesem Skript eine allgemeine und 
-leicht verständliche Anleitung für jedes Neumitglied wird. Durch die freie Lizenz darfst du diesen Text abändern,
-anpassen und vervielfältigen. Wenn du über \LaTeX-Kenntnisse verfügst und gerne daran mitarbeiten möchtest, schau auf 
+Diese Anleitung entstand als Begleitskript zu einem Einführungskurs für Neupiraten im Bezirksverband Schwaben. Ich 
+würde mich freuen, wenn aus diesem Skript eine allgemeine und leicht verständliche Anleitung für jedes Neumitglied 
+wird. Durch die freie Lizenz darfst du diesen Text abändern, anpassen und vervielfältigen. Wenn du über 
+\LaTeX-Kenntnisse verfügst und gerne daran mitarbeiten möchtest, schau auf 
 
 \begin{center}
 \url{https://github.com/michiwend/Tools-in-der-Piratenpartei}
 \end{center}
 
-Ein besonderer Dank geht an Marco Geupert, von dem ich die ein oder andere Formulierung kopiert habe. Das gesamte
-Dokument steht unter einer \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons
+Das gesamte Dokument steht unter einer \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons
 Namensnennung-Nicht-kommerziell-Weitergabe unter gleichen Bedingungen 3.0 Unported Lizenz.}
+
+\vspace{3cm}
+\begin{center}
+\textit{Ein besonderer Dank geht an \textbf{Marco Geupert}, dessen Anleitung als Ideenquelle diente und an 
+\textbf{Andreas Herz} für die Unterstützung und die gemeinschaftliche Organisation der Kurse}
+\end{center}
 
 \newpage
 \section{Mailinglisten - Eine Mail, viele Empfänger}
@@ -400,7 +409,7 @@ verwendet. Die Farbe lässt sich aber ändern.
 
 \item[4]In dieser Leisten können verschiedene Funktionen aufgerufen werden:
 	\subitem \textit{Read-only Version} leitet euch zu einer Betrachtung des Pads, in der nicht geschrieben werden 
-kann. Dieser Link kann anderen zum Betrachten gegeben werden.
+	kann. Dieser Link kann anderen zum Betrachten gegeben werden.
 	
 	\subitem Die \textit{Pad Options} ermöglichen z.\,B. die Farbhinterlegung oder die Zeilennummerierung an- und
 	abzuschalten. Die Darstellung des Texts kann auch auf \textit{Monospaced} gestellt werden (gleichbreite Buchstaben)
@@ -409,11 +418,11 @@ kann. Dieser Link kann anderen zum Betrachten gegeben werden.
 	werden oder eine Datei von dem Computer hochgeladen.
 
 	\subitem Mit \textit{Saved revisions} kann man ganz geziehlt das Pad speichern, etwar wenn ein bestimmter 
-Abschnitt fertig gestellt ist. Das Speichern ist allerdings nicht notwendig, da jeder Buchstabe beim Tippen schon 
-gespeichert wird. Und wer das nicht glaubt, kann mit dem
+	Abschnitt fertig gestellt ist. Das Speichern ist allerdings nicht notwendig, da jeder Buchstabe beim Tippen schon 
+	gespeichert wird. Und wer das nicht glaubt, kann mit dem
 
 	\subitem \textit{Time Slider} - eine Zeitleiste mit Schieberegler - jeden einzelnen Tastenanschlag bis zum Anfang 
-rückgängig machen
+	rückgängig machen
 
 	\subitem Wer in einem Teampad arbeitet, der findet an zweiter Stelle noch den Reiter \textit{Security}, mit dem man
 	zwichen nichtöffentlich und öffentlich wählen kann.
