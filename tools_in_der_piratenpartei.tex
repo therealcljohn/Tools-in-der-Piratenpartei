@@ -25,6 +25,12 @@
 \usepackage{enumerate}
 \usepackage{wasysym}
 
+% Umfließen von Grafiken mit \begin{wrapfigure}
+\usepackage{wrapfig} % Paket zur Positionierung einbinden
+
+% Grafiken nebeneinander darstellen
+\usepackage{subfigure}
+
 %Kopfzeile mit Piratenlogo
 %\usepackage{scrpage2}
 %\pagestyle{scrheadings} 
@@ -64,8 +70,7 @@
 	\includegraphics[width=0.5\textwidth]{images/logo_bzv_schwaben}
 }
 \author{
-Michael Wendland\\
-Jens Kubiziel\\
+Michael Wendland
 }
 
 \begin{document}
@@ -76,7 +81,7 @@ Jens Kubiziel\\
 
 \newpage
 \section{Vorwort}
-Diese Anleitung entstand als Begleitskript zu einem Einführungskurs für Neupiraten im Bezirksverband Schwaben. Ich 
+Diese Anleitung entstand als Begleitskript zu einem Einführungskurs für Neumitglieder im Bezirksverband Schwaben. Ich 
 würde mich freuen, wenn aus diesem Skript eine allgemeine und leicht verständliche Anleitung für jedes Neumitglied 
 wird. Durch die freie Lizenz darfst du diesen Text abändern, anpassen und vervielfältigen. Wenn du über 
 \LaTeX-Kenntnisse verfügst und gerne daran mitarbeiten möchtest, schau auf 
@@ -90,8 +95,9 @@ Namensnennung-Nicht-kommerziell-Weitergabe unter gleichen Bedingungen 3.0 Unport
 
 \vspace{3cm}
 \begin{center}
-\textit{Ein besonderer Dank geht an \textbf{Marco Geupert}, dessen Anleitung als Ideenquelle diente und an 
-\textbf{Andreas Herz} für die Unterstützung und die gemeinschaftliche Organisation der Kurse}
+\textit{Ein besonderer Dank geht an \textbf{Marco Geupert}, dessen Anleitung als Ideenquelle diente, an \textbf{Jens 
+Kubiziel} für die Mitarbeit an diesem Skript und an \textbf{Andreas Herz} für die Unterstützung und die 
+gemeinschaftliche Organisation der Kurse}
 \end{center}
 
 \newpage
@@ -439,19 +445,20 @@ erkennen sind öffentliche Pads vor allem an der Webadresse. Ist der Hauptadresse
 einen Punkt getrennt vorangestellt, so ist es ein offenes Pad. Auf diese Pads kann jeder zugreifen und auch keiner
 ausgeschlossen werden.
 
+\begin{wrapfigure}{l}{8cm}
+	\includegraphics[width=7.5cm]{images/pad_login}
+	\caption{Anmelden an einem Teampad}
+	\label{pad_login}
+\end{wrapfigure}
+
 \paragraph{Regelmäßig in einer Gruppe}
+
 In diesem Fall empfiehlt es sich, ein \textit{Team} anzulegen. Auf der Startseite des Piratenpads, findet sich dazu die
 Schaltfläche "`Neues Team"'. Ein Team wird als Unterseite von \textit{piratenpad.de} angelegt und kann über 
 \textit{unterseite.piratepad.de} aufgerufen werden. Es hat eine Benutzerverwaltung und vollkommen getrennte Pads, die
 nichtöffentlich angelegt werden. Derjenige, der das Team anlegt, hat auch am Anfang die Kontrolle über den Kreis der
 Teamnutzer. Selbstverständlich können auch Pads eines Teams öffentlich gemacht werden, was i.\,A. auch gemacht wird
 (z.\,B. Vorstandssitzung des BzV. Schwaben).
-
-\begin{figure}[h]
-\centering\includegraphics[width=0.5\textwidth]{images/pad_login}
-\caption{Anmelden an einem Teampad}
-\label{pad_login}
-\end{figure}
 
 An diesem Punkt möchte ich für Teams die ausführliche Anleitung von
 Stefan Müller weiterempfehlen:
@@ -460,16 +467,16 @@ Stefan Müller weiterempfehlen:
 \colorbox{orange}{\url{http://www.piratenpad.de/Piratenpad_Anleitung_1_0.pdf}}
 \end{center}
 
+\subsection{Bedienung}
+Das Piratenpad kann mit jedem modernem Browser (Firefox, Chrome, Safari, ...) geöffnet werden. Probleme kann es
+allerdings bei Smartphones geben. Manche zeigen noch den Text an aber ein Mitarbeiten ist fast immer ausgeschlossen. In
+ \autoref{pad_uebersicht} habe ich 4 wichtige Bereiche hervorgehoben. Dazu:
+
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/pad_uebersicht}
 \caption{Ein öffentliches Pad}
 \label{pad_uebersicht}
 \end{figure}
-
-\subsection{Bedienung}
-Das Piratenpad kann mit jedem modernem Browser (Firefox, Chrome, Safari, ...) geöffnet werden. Probleme kann es
-allerdings bei Smartphones geben. Manche zeigen noch den Text an aber ein Mitarbeiten ist fast immer ausgeschlossen. In
- \autoref{pad_uebersicht} habe ich 4 wichtige Bereiche hervorgehoben. Dazu:
 
 \begin{enumerate}[Bere{i}ch~1]
 \item Das ist der Bereich, in dem der Text verfasst wird. Jedes Wort wird in der Farbe des Benutzers hinterlegt; so
@@ -528,7 +535,7 @@ Zunächst brauchen wir das Programm. Die aktuelle Version ist 1.2.3 (Stable). Die
 Linux und Mac OS unter folgender Adresse:
 
 \begin{center}
-\colorbox{orange}{\url{http://mumble.sourceforge.net/}}
+ \colorbox{orange}{\url{http://mumble.sourceforge.net/}}
 \end{center}
 
 Auf die einzelnen Installationsschritte unter Windows gehe ich hier nicht ein, da sie dem Standardprocedere entsprechen
@@ -536,51 +543,62 @@ und das Setup auch selbsterklärend ist. Unter Linux ist das Programm meistens au
 Distribution zu beziehen. Mit Mac OS wird es sich ähnlich verhalten, hier aber habe ich keine Erfahrung. Spätestens beim
 ersten Start des Programms wird ein Audioassistent geöffnet. Dieser ist ausführlich erklärt und sollte korrekt
 durchgeführt werden, damit eure Sprache gut aufgenommen wird! Unter dem Punkt \textit{Sprachaktivitätserkennung} des
-Assistenten sollte die Auswahl wie in \autoref{mumble_ass_push} gewählt werden. Damit wird eine Taste zum Aktivieren
-eurer Stimme benutzt (auch PushToTalk genannt), die ihr selbst festlegen müsst (durch Klicken in das weiße Eingabefeld
-und anschließendem Drücken der gewünschten Taste). Ich verwende hierfür meine rechte Shift-Taste, ihr könnte jede
-beliebige andere verwenden.
+Assistenten sollte die Auswahl wie in \autoref{mumble_ass_push} gewählt werden.
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{images/mumble_ass_push}
-\caption{Wichtig: Push to Talk auswählen und Taste festlegen}
-\label{mumble_ass_push}
+ \includegraphics[width=\textwidth]{images/mumble_ass_push}
+  \caption{Wichtig:  Push"~To"~Talk auswählen und Taste festlegen}
+  \label{mumble_ass_push}
 \end{figure}
+
+\noindent wird eine Taste zum Aktivieren
+eurer Stimme benutzt (auch Push"~To"~Talk genannt), die ihr selbst festlegen müsst (durch Klicken in das weiße 
+Eingabefeld und anschließendem Drücken der gewünschten Taste). Ich verwende hierfür meine rechte Shift-Taste, ihr 
+könnte jede beliebige andere verwenden.
 
 \subsection{Einrichtung}
-Nach dem Audioassistenten sind wir fast startklar, fast. Wir benötigen jetzt noch den Server, auf dem die Konferenzen
-zu finden sind. Dazu gibt es im Dateimenü (Servermenü unter Linux) den Punkt \textit{Verbinden}, der die Serverliste
-(\autoref{mumble_server_liste}) öffnet.
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{images/mumble_server_liste}
-\caption{Server auswählen / hinzufügen}
-\label{mumble_server_liste}
+ \centering
+  \subfigure[Serverliste]
+   {\includegraphics[width=0.5\textwidth]{images/mumble_server_liste}}
+  \hfill
+  \subfigure[Server Eingeben]
+   {\includegraphics[width=0.4\textwidth]{images/mumble_server_hinzu}}
+  \caption{Server hinzufügen}
+  \label{server_add}
 \end{figure}
 
-Die Schaltfläche \textit{Server hinzufügen...} bringt uns nun zur Eingabemaske für unseren Mumble-Server (\autoref{mumble_server_hinzu}) Dabei sind die einzelnen Felder wie folgt auszufüllen:
+\noindent dem Audioassistenten sind wir fast startklar, fast. Wir benötigen jetzt noch den Server, auf dem die 
+Konferenzen zu finden sind. Dazu gibt es im Dateimenü (Servermenü unter Linux) den Punkt \textit{Verbinden}, der die 
+Serverliste (\autoref{server_add}) öffnet. Die Schaltfläche "`\textit{Server hinzufügen...}"' bringt uns nun zur 
+Eingabemaske für unseren Mumble-Server (\autoref{server_add}) Dabei sind die einzelnen Felder wie folgt auszufüllen:
 
 \begin{itemize}
-\item \textbf{Bezeichnung} Eine frei gewählt Bezeichnung für euren neuen Server. Diese wird in der Liste (\autoref{mumble_server_liste}) mit diesem Namen angezeigt
+\item \textbf{Bezeichung} Eine frei gewählt Bezeichnung für euren neuen Server. Diese wird in der Liste 
+(\autoref{server_add}) mit diesem Namen angezeigt
 
-\item \textbf{Adresse} Die Serveradresse des NRW-Servers \textit{mumble.piratenpartei-nrw.de}
+\item
+ \textbf{Adresse} Die Serveradresse des NRW-Servers \textit{mumble.piratenpartei-nrw.de}
 
-\item \textbf{Port} Standard 64738 \item \textbf{Benutzername} Den dürft ihr frei wählen, vorausgesetzt er ist noch 
+\item
+ \textbf{Port} Standard 64738 \item \textbf{Benutzername} Den dürft ihr frei wählen, vorausgesetzt er ist noch 
 nicht vergeben. Wählt hier einfach einen Nickname, ihr müsst auch hier nicht euren richtigen Namen verwenden.
 \end{itemize}
 
-\begin{figure}[h]
-\centering\includegraphics[width=0.5\textwidth]{images/mumble_server_hinzu}
-\caption{Hier werden die Serverdaten eingetragen}
-\label{mumble_server_hinzu}
-\end{figure}
-
-Nachdem das vollbracht ist, befindet sich der Server nun dauerhaft in der Liste eurer Favoriten 
-(\autoref{mumble_server_liste}). Ein Doppelklick darauf verbindet euch dann mit dem Server und ihr seht dann das 
-eigentliche Mumble-Fenster (\autoref{mumble_raum_schwaben})
+Nachdem das vollbracht ist, befindet sich der Server nun dauerhaft in der Liste eurer Favoriten. Ein Doppelklick 
+darauf verbindet euch dann mit dem Server und ihr seht dann das eigentliche Mumble-Fenster 
+(\autoref{mumble_raum_schwaben})
 
 \subsection{Bedienung}
 Die Hauptelemente des Mumblefensters kurz erklärt (siehe rote Nummern in \autoref{mumble_raum_schwaben})
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=\textwidth]{images/mumble_raum_schwaben}
+   \caption{Das Hauptfenster von Mumble - Raum Schwaben}
+   \label{mumble_raum_schwaben}
+\end{figure}
 
 \begin{enumerate}[Bere{i}ch~1]
 \item Das ist die Raumliste. Hier werden alle Sprachräume in einer Baumstruktur dargestellt. Durch einen Doppelklick
@@ -605,12 +623,6 @@ abläuft. In Vorstandssitzungen ist es üblich, dass Gäste sich durch "`Wortmeldun
 Chat) bemerkbar machen und vom Sitzungsleiter aufgerufen werden. In größeren Sprachräumen (z.\,B. \textit{Dicker 
 Engel\footnote{\url{http://wiki.piratenpartei.de/Dicker_Engel}}} in \textit{Bund}) gibt es sogar extra Unterräume
 (\textit{Saalmikro} in Anlehnung an Parteitage) in die sich Redner einreihen.
-
-\begin{figure}[h]
-\centering\includegraphics[width=\textwidth]{images/mumble_raum_schwaben}
-\caption{Das Hauptfenster von Mumble - Raum Schwaben}
-\label{mumble_raum_schwaben}
-\end{figure}
 
 \newpage
 \listoffigures
